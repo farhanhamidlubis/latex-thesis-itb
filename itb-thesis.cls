@@ -83,4 +83,37 @@
 % Define abstract in English
 
 % Define approval page
+\def\approvalpage{
+	\clearpage
+	\begin{center}
+		\begin{singlespace}
+			\lsstyle\fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@thesistitle}
+			\par\nobreak					
+			\vspace{32pt}
+			\normalfont{\fontsize{12pt}{14pt}\selectfont Oleh}\\
+			{\normalfont\bfseries\@fullname\\NIM: \@idnum}\\
+			\fontsize{12pt}{14pt}\selectfont{\bfseries (Program Studi \@degree)}\\			
+			\vspace{14pt}
+			\fontsize{12pt}{14pt}\selectfont
+			{\normalfont \@university}\\
+			\vspace{42pt}
+			{\normalfont Menyetujui\\Tim Pembimbing}\\
+			\vspace{14pt}
+			{\normalfont Tanggal \@approvaldate}\\
+			\vspace{28pt}
+			{\normalfont Ketua}\\		
+			\vspace{42pt}
+			{\normalfont \underline{(\@firstsupervisor)}\\NIP. \@firstnip}\\
+			\vspace{42pt}
+			\begin{tabular}{ccc}
+				Anggota & \hspace{1cm} & Anggota\\
+				\vspace{12pt} & & \vspace{12pt}\\
+				\underline{(\@secondsupervisor)} & & \underline{(\@thirdsupervisor)}\\
+				NIP. \@secondnip & & NIP. \@thirdnip    
+    		\end{tabular}
+    
+    
+		\end{singlespace}	
+	\end{center}	
+}
 
