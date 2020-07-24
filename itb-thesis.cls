@@ -9,7 +9,9 @@
 \usepackage{newtxtext,newtxmath}
 \usepackage{anyfontsize}
 \usepackage[letterspace=20]{microtype}
-\usepackage{verbatim,enumerate}
+\usepackage{hanging}
+
+\setlength{\parindent}{0pt}
 
 % Layout
 \setlength{\topmargin}{0pt}
@@ -27,7 +29,8 @@
 \def\captionbahasa{
 	\def\abstractname{ABSTRAK}
 }
-%\def\approvalname{HALAMAN PENGESAHAN}
+\def\approvalname{HALAMAN PENGESAHAN}
+\def\thesisguidename{PEDOMAN PENGGUNAAN TESIS}
 
 % Define inputan data tesis
 \gdef\@university{Institut Teknologi Bandung}
@@ -64,11 +67,11 @@
 			\lsstyle\fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@thesistitle}
 			\par\nobreak			
 			\vskip 0pt plus 2fill\relax
-			\MakeUppercase{\normalfont\bfseries Tesis}\\		
+			\MakeUppercase{\normalfont\bfseries Tesis}\\	
 			\vspace{14pt}			
 			{\fontsize{12pt}{14pt}\selectfont\normalfont\bfseries Karya tulis sebagai salah satu syarat\\untuk memperoleh gelar Magister dari\\ \@university}			
 			\vskip 0pt plus 1fill\relax
-			\normalfont\bfseries {\fontsize{12pt}{14pt}\selectfont Oleh}\\ {\MakeUppercase{\normalfont\bfseries\@fullname\\NIM: \@idnum}\\(Program Studi \@degree)}			
+			\normalfont\bfseries {\fontsize{12pt}{14pt}\selectfont Oleh}\\ {\MakeUppercase{\normalfont\bfseries\@fullname\\NIM: \@idnum}\\(Program Studi \@degree)}		
 			\vskip 0pt plus 1fill\relax			
 			\includegraphics[width=2.35cm,height=3.5cm]{images/logo-itb.png}
 			\vskip 0pt plus 1.5fill\relax			
@@ -110,10 +113,16 @@
 				\vspace{12pt} & & \vspace{12pt}\\
 				\underline{(\@secondsupervisor)} & & \underline{(\@thirdsupervisor)}\\
 				NIP. \@secondnip & & NIP. \@thirdnip    
-    		\end{tabular}
-    
-    
+    		\end{tabular}    
 		\end{singlespace}	
 	\end{center}	
+%	\addcontentsline{toc}{chapter}{\approvalname}
 }
+
+%Define thesis guide page
+\def\thesisguide{
+	\chapter*{\thesisguidename}
+	\addcontentsline{toc}{chapter}{\thesisguidename}
+}
+
 
