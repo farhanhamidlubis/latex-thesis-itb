@@ -11,6 +11,7 @@
 \usepackage[letterspace=20]{microtype}
 \usepackage{hanging}
 \usepackage{array}
+\usepackage{longtable}
 
 \setlength{\parindent}{0pt}
 

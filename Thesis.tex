@@ -105,8 +105,14 @@ Cara menulis kata pengantar beraneka ragam, tetapi semuanya hendaknya menggunaka
 \addcontentsline{toc}{chapter}{\listtablename}
 
 \singkatan
-\begin{tabular}{@{}p{3cm}@{}@{}p{7.8cm}@{}@{}p{3cm}@{}}
-SINGKATAN & \centering Nama & \raggedright Pemakaian pertama kali pada halaman \tabularnewline
+\begin{longtable}{@{}p{3cm}@{}@{}p{8cm}@{}@{}p{3cm}@{}}
+
+SINGKATAN & \centering Nama & \raggedright Pemakaian pertama kali pada halaman \\
+\endfirsthead
+LAMBANG & \centering Nama & \raggedright Pemakaian pertama kali pada halaman \\
+\endhead
+
+
 AMR & \textit{Adaptive Mesh Refinement} &  \tabularnewline
 CT & \textit{Computed Tomography} &  \tabularnewline
 DNS & Dekomposisi Nilai Singular &  \tabularnewline
@@ -123,10 +129,41 @@ TOF & Tomografi Optis Fluoresens & \tabularnewline
 \tabularnewline
 LAMBANG & & \tabularnewline
 \tabularnewline
-\textit{A} & Konstanta pada hubungan tegangan & \tabularnewline
-$\textit{A}_l$ & Contoh simbol & \tabularnewline
-$A_0$ & Amplitudo sinyal sinar keluar & \tabularnewline
-\end{tabular}
+$A$ & Konstanta pada hubungan tegangan & \tabularnewline
+$A_1$ & Contoh simbol & \tabularnewline
+$\rm A_o$ & Amplitudo sinyal sinar keluar & \tabularnewline
+$\rm A_i$ & Amplitudo sinyal sinar masuk & \tabularnewline
+$a$ & Vektor kerapatan foton pada suatu elemen & \tabularnewline
+$a_i$ & Kecepatan & \tabularnewline
+$a_{ij}$ & Fungsi reaksi variabel dalam koefisien & \tabularnewline
+& persamaan diferensial & \tabularnewline
+$b$ & Persamaan dasar perambatan gelombang & \tabularnewline
+$c$ & Kecepetan sinar & \centering 5 \tabularnewline
+$c_0$ & Gaya badan spesifik & \tabularnewline
+$f$ & Peluang rapat hamburan & \centering 5 \tabularnewline
+$\rm I_h$ & Iradians sinar hamburan & \tabularnewline
+$L$ & Radians sinar yang menjalar & \tabularnewline
+$N$ & Jumlah simpul & \tabularnewline
+$n$ & Variabel bentuk area penjalaran sinar & \centering 5 \tabularnewline
+$\rm n_1$ & Indeks bias medium sekitar objek & \tabularnewline
+$\rm n_2$ & Indeks bias objek & \tabularnewline
+$\hat{n}$ & Vektor bidang normal terhadap bidang $\delta\omega$ & \tabularnewline
+$Q$ & Daya foton yang diinjeksikan per satuan & \centering 5 \tabularnewline
+& volume & \tabularnewline
+$\hat{S}^{n-1}$ & Posisi & \centering 5 \tabularnewline
+$\hat{s}$ & Area penjalaran sinar & \centering 5 \tabularnewline
+$t$ & Waktu & \centering 5 \tabularnewline
+$\alpha$ & Sudut antara arah $\hat{s}$ dan $\hat{s}^\prime$& \centering 5 \tabularnewline
+$\alpha_1$ & Variabel internal pertama & \tabularnewline
+$\alpha_2$ & Variabel internal kedua & \tabularnewline
+$\delta$ & Koefisien viskositas & \tabularnewline
+$\rm \theta_a$ & Sudut masuk & \tabularnewline
+$\rm \theta_b$ & Sudut keluar & \tabularnewline
+$\lambda$ & Panjang gelombang & \tabularnewline
+$\mu_a$ & Koefisien penyerapan & \centering 5 \tabularnewline
+$\mu_s$ & Koefisien hamburan & \tabularnewline
+$\Omega$ & Domain ruang suatu objek & \centering 5 \tabularnewline
+\end{longtable}
 
 \vspace{14pt}
 \begin{onehalfspace}
