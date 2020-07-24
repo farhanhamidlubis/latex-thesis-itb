@@ -10,6 +10,7 @@
 \usepackage{anyfontsize}
 \usepackage[letterspace=20]{microtype}
 \usepackage{hanging}
+\usepackage{array}
 
 \setlength{\parindent}{0pt}
 
@@ -33,6 +34,11 @@
 \def\thesisguidename{PEDOMAN PENGGUNAAN TESIS}
 \def\dedicationpagename{HALAMAN PERUNTUKAN}
 \def\prefacename{KATA PENGANTAR}
+\def\contentsname{DAFTAR ISI}%
+
+\def\listfigurename{DAFTAR GAMBAR DAN ILUSTRASI}
+\def\listtablename{DAFTAR TABEL}
+\def\nomenclaturename{DAFTAR SINGKATAN DAN LAMBANG}%
 
 % Define inputan data tesis
 \gdef\@university{Institut Teknologi Bandung}
@@ -138,4 +144,11 @@
 	\chapter*{\prefacename}
 	\addcontentsline{toc}{chapter}{\prefacename}
 }
+
+% Define nomenclature
+\def\singkatan{
+	\chapter*{\nomenclaturename}
+	\thispagestyle{plain}
+	\addcontentsline{toc}{chapter}{\nomenclaturename}
+}	
 
