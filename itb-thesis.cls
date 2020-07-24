@@ -31,7 +31,8 @@
 }
 \def\approvalname{HALAMAN PENGESAHAN}
 \def\thesisguidename{PEDOMAN PENGGUNAAN TESIS}
-\def\dedicationpagename{HALAMAN PERSEMBAHAN}%
+\def\dedicationpagename{HALAMAN PERUNTUKAN}
+\def\prefacename{KATA PENGANTAR}
 
 % Define inputan data tesis
 \gdef\@university{Institut Teknologi Bandung}
@@ -117,7 +118,7 @@
     		\end{tabular}    
 		\end{singlespace}	
 	\end{center}	
-%	\addcontentsline{toc}{chapter}{\approvalname}
+	\addcontentsline{toc}{chapter}{\approvalname}
 }
 
 % Define thesis guide page
@@ -130,5 +131,11 @@
 \def\dedicationpage{
 	\clearpage
 	\addcontentsline{toc}{chapter}{\dedicationpagename}
+}
+
+% Define preface
+\def\preface{
+	\chapter*{\prefacename}
+	\addcontentsline{toc}{chapter}{\prefacename}
 }
 
