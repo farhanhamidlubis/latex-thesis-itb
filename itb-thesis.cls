@@ -12,8 +12,7 @@
 \usepackage{hanging}
 \usepackage{array}
 \usepackage{longtable}
-
-\setlength{\parindent}{0pt}
+\usepackage{enumitem}
 
 % Layout
 \setlength{\topmargin}{0pt}
@@ -26,6 +25,12 @@
 \setlength{\footskip}{1.5cm}
 \setlength{\marginparsep}{0pt}
 \setlength{\marginparwidth}{0pt}
+
+% Some preference settings 
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{0pt}
+%\setlength{\parskip}{1em}
+\setlist[enumerate]{topsep=0pt,itemsep=0pt,partopsep=0pt,parsep=0pt}
 
 % Redefine caption names
 \def\captionbahasa{
@@ -76,14 +81,19 @@
 			\lsstyle\fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@thesistitle}
 			\par\nobreak			
 			\vskip 0pt plus 2fill\relax
+			
 			\MakeUppercase{\normalfont\bfseries Tesis}\\	
-			\vspace{14pt}			
+			\vspace{\baselineskip}			
+			
 			{\fontsize{12pt}{14pt}\selectfont\normalfont\bfseries Karya tulis sebagai salah satu syarat\\untuk memperoleh gelar Magister dari\\ \@university}			
 			\vskip 0pt plus 1fill\relax
+			
 			\normalfont\bfseries {\fontsize{12pt}{14pt}\selectfont Oleh}\\ {\MakeUppercase{\normalfont\bfseries\@fullname\\NIM: \@idnum}\\(Program Studi \@degree)}		
 			\vskip 0pt plus 1fill\relax			
-			\includegraphics[width=2.35cm,height=3.5cm]{images/logo-itb.png}
+			
+			\includegraphics[width=2.35cm,height=3.5cm]{logo-itb.png}
 			\vskip 0pt plus 1.5fill\relax			
+			
 			\MakeUppercase{\normalfont\bfseries \@university}\\
 			{\normalfont\bfseries\@monthsubmit \ \@yearsubmit}
 		\end{singlespace}
@@ -101,25 +111,33 @@
 		\begin{singlespace}
 			\lsstyle\fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@thesistitle}
 			\par\nobreak					
-			\vspace{32pt}
+			\vspace{2\baselineskip}
+			
 			\normalfont{\fontsize{12pt}{14pt}\selectfont Oleh}\\
 			{\normalfont\bfseries\@fullname\\NIM: \@idnum}\\
 			\fontsize{12pt}{14pt}\selectfont{\bfseries (Program Studi \@degree)}\\			
-			\vspace{14pt}
+			\vspace{\baselineskip}	
+
 			\fontsize{12pt}{14pt}\selectfont
 			{\normalfont \@university}\\
-			\vspace{42pt}
+			\vspace{3\baselineskip}
+			
 			{\normalfont Menyetujui\\Tim Pembimbing}\\
-			\vspace{14pt}
+			\vspace{\baselineskip}
+			
 			{\normalfont Tanggal \@approvaldate}\\
-			\vspace{28pt}
+			\vspace{2\baselineskip}
+			
 			{\normalfont Ketua}\\		
-			\vspace{42pt}
+			\vspace{3\baselineskip}
+			
 			{\normalfont \underline{(\@firstsupervisor)}\\NIP. \@firstnip}\\
-			\vspace{42pt}
+			\vspace{3\baselineskip}
+			
 			\begin{tabular}{ccc}
 				Anggota & \hspace{1cm} & Anggota\\
-				\vspace{12pt} & & \vspace{12pt}\\
+				\rule{0pt}{42pt}  & & \rule{0pt}{42pt} \\
+				
 				\underline{(\@secondsupervisor)} & & \underline{(\@thirdsupervisor)}\\
 				NIP. \@secondnip & & NIP. \@thirdnip    
     		\end{tabular}    

@@ -1,4 +1,5 @@
 \documentclass{itb-thesis}
+\graphicspath{{images/}}
 
 % Redefine unit to mm
 \makeatletter
@@ -8,7 +9,7 @@
 % Input Data Tesis
 \faculty{Fakultas Teknik Pertambangan dan Perminyakan}
 
-\thesistitle{Tulis Judul Tesis Pada Bagian Ini (Jenis Huruf \textit{Times New Roman}, Huruf Kapital, Ukuran Huruf 14, Cetak Tebal, Ukuran Spasi 1)dfasdfasdfsadfsdfasdfasdf vdsf}
+\thesistitle{Tulis Judul Tesis Pada Bagian Ini (Jenis Huruf \textit{Times New Roman}, Huruf Kapital, Ukuran Huruf 14, Cetak Tebal, Ukuran Spasi 1)}
 
 \fullname{Farhan Hamid Lubis}
 
@@ -32,13 +33,25 @@
 \thirdnip{000003}
 
 \begin{document}
+
+% ===================================================== %
+% COVER
+% ===================================================== %
 \cover
+
 %\layout
 
+% ===================================================== %
+% HALAMAN PENGESAHAN
+% ===================================================== %
 \approvalpage
 
+
+% ===================================================== %
+% PEDOMAN PENGGUNAAN TESIS
+% ===================================================== %
 \thesisguide
-\begin{onehalfspace}
+
 Tesis Magister yang tidak dipublikasikan terdaftar dan tersedia di Perpustakaan Institut Teknologi Bandung, dan terbuka untuk umum dengan ketentuan bahwa hak cipta pada penulis dengan mengikuti aturan HaKI yang berlaku di Institut Teknologi Bandung. Referensi kepustakaan diperkenankan dicatat, tetapi pengutipan atau peringkasan hanya dapat dilakukan seizin penulis dan harus disertai dengan kaidah ilmiah untuk menyebutkan sumbernya.
 
 \vspace{14pt}
@@ -66,11 +79,15 @@ Memperbanyak atau menerbitkan sebagian atau seluruh tesis haruslah seizin Dekan 
 \vspace{14pt}
 
 Catatan: baris kedua yang merupakan kelanjutan dari baris pertama (satu judul buku), dimulai dengan 7 ketukan (satu Tab) atau ronggak (\textit{hanging indentation}: 1,27 cm) dari tepi halaman.
-\end{onehalfspace}
 
+
+% ===================================================== %
+% HALAMAN PERUNTUKAN
+% ===================================================== %
 \dedicationpage
+
 \begin{center}
-\begin{onehalfspace}
+
 \ 
 \vfill
 \begin{itshape}
@@ -83,35 +100,55 @@ Contoh
 Dipersembahkan kepada orang tua, suami, anak, adik kakak, mertua serta keluarga besarku tercinta yang senantiasa mendukung lahir dan batin.
 \end{itshape}
 \vfill
-\end{onehalfspace}
+
 \end{center}
 
+
+% ===================================================== %
+% KATA PENGANTAR
+% ===================================================== %
 \preface
-\begin{onehalfspace}
+
 Halaman kata pengantar dicetak pada halaman baru. Pada halaman ini mahasiswa S2 berkesempatan untuk menyatakan terima kasih secara tertulis kepada pembimbing dan perorangan lainnya yang telah memberi bimbingan, nasihat, saran dan kritik, serta kepada mereka yang telah membantu melakukan penelitian, kepada perorangan atau badan telah memberi bantuan pembiayaan, dan sebagainya.
 
 \vspace{14pt}
 
 Cara menulis kata pengantar beraneka ragam, tetapi semuanya hendaknya menggunakan kalimat yang baku. Ucapan terima kasih agar dibuat tidak berlebihan dan dibatasi hanya yang "\textit{scientifically related}".
-\end{onehalfspace}
 
+
+% ===================================================== %
+% DAFTAR ISI
+% ===================================================== %
 \tableofcontents
 \addcontentsline{toc}{chapter}{\contentsname}
 
+
+% ===================================================== %
+% DAFTAR GAMBAR DAN ILUSTRASI
+% ===================================================== %
 \listoffigures
 \addcontentsline{toc}{chapter}{\listfigurename}
 
+
+% ===================================================== %
+% DAFTAR TABEL
+% ===================================================== %
 \listoftables
 \addcontentsline{toc}{chapter}{\listtablename}
 
+
+% ===================================================== %
+% DAFTAR SINGKATAN DAN LAMBANG
+% ===================================================== %
 \singkatan
+
+\begin{singlespace}
 \begin{longtable}{@{}p{3cm}@{}@{}p{8cm}@{}@{}p{3cm}@{}}
 
 SINGKATAN & \centering Nama & \raggedright Pemakaian pertama kali pada halaman \\
 \endfirsthead
 LAMBANG & \centering Nama & \raggedright Pemakaian pertama kali pada halaman \\
 \endhead
-
 
 AMR & \textit{Adaptive Mesh Refinement} &  \tabularnewline
 CT & \textit{Computed Tomography} &  \tabularnewline
@@ -163,13 +200,25 @@ $\lambda$ & Panjang gelombang & \tabularnewline
 $\mu_a$ & Koefisien penyerapan & \centering 5 \tabularnewline
 $\mu_s$ & Koefisien hamburan & \tabularnewline
 $\Omega$ & Domain ruang suatu objek & \centering 5 \tabularnewline
+
 \end{longtable}
+\end{singlespace}
 
 \vspace{14pt}
-\begin{onehalfspace}
+
 Catatan: Pada contoh daftar singkatan dan lambang di atas tidak semua diberi nomor halaman. Hal ini karena singkatan dan lambang tersebut tidak ada pada naskah template tesis. Berkaitan dengan hal tersebut pada naskah tesis semua singkatan dan lambang yang digunakan beserta nomor halamannya wajib ditulis dalam daftar ini. Halaman daftar singkatan dan lambang ditulis pada halaman baru. Baris-baris kata pada halaman daftar singkatan dan lambang berjarak satu spasi. Halaman ini memuat singkatan istilah, satuan dan lambang variabel/besaran (ditulis di kolom pertama), nama variabel dan nama istilah lengkap yang ditulis di belakang lambang dan singkatannya (ditulis di kolom kedua), dan nomor halaman tempat singkatan lambang muncul untuk pertama kali (ditulis di kolom ketiga).
 
 Singktan dan lambang pada kolom pertama diurut menurut abjad Latin, huruf kapital kemudian disusul oleh huruf kecilnya, kemudian disusul dengan lambang yang ditulis dengan huruf Yunani yang juga diurut sesuai dengan abjad Yunani. Nama variabel/besaran atau nama istilah pada kolom kedua ditulis dengan huruf kecil kecuali huruf pertama yang ditulis dengan huruf kapital
-\end{onehalfspace}
+
+
+% ===================================================== %
+% BAB 1 - 5
+% ===================================================== %
+\include{chapters/bab1}
+\include{chapters/bab2}
+\include{chapters/bab3}
+\include{chapters/bab4}
+\include{chapters/bab5}
+
 
 \end{document}
