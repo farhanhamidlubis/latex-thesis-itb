@@ -1,0 +1,83 @@
+\documentclass[a4paper, 12pt, oneside]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage{subfiles}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{anyfontsize}
+\usepackage{titlesec}
+\usepackage[tracking=true]{microtype}
+\usepackage{lipsum}
+\usepackage{tocloft, calc}
+\usepackage{enumitem}
+\usepackage{tabularx, array, xcolor, colortbl, multirow, multicol, booktabs}
+\usepackage{lscape, pdflscape}
+
+\makeatletter
+\renewcommand{\@cftmaketoctitle}{}
+\makeatother
+
+
+\geometry{
+    left = 40mm,
+    right = 30mm,
+    top = 30mm,
+    bottom = 30mm,
+    }
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}[hang]{\centering\fontsize{14}{16.8}\selectfont\bfseries}{{{Bab}\ \thechapter}}{14pt}{\fontsize{14}{16.8}\selectfont}
+\titlespacing*{\chapter}{0pt}{-50pt}{1.25\baselineskip}
+
+\titleformat{\section}[hang]{\fontsize{10}{12}\selectfont\bfseries}{{\thesection}}{14pt}{\fontsize{10}{12}\selectfont}
+\titlespacing*{\section}{0pt}{1.25\baselineskip}{0pt}
+
+\titleformat{\subsection}[hang]{\fontsize{10}{12}\selectfont\bfseries}{{\thesubsection}}{14pt}{\fontsize{10}{12}\selectfont}
+\titlespacing*{\subsection}{0pt}{1.25\baselineskip}{0pt}
+
+\renewcommand\cftchapnumwidth{10mm}
+\renewcommand\cftchapfont{\normalfont}
+\renewcommand\cftchappagefont{\normalfont}
+\renewcommand\cftsecindent{+10mm}
+\renewcommand\cftsubsecindent{+20mm}
+\renewcommand\cftbeforechapskip{0pt}
+\renewcommand\cftdotsep{1}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+
+
+\onehalfspacing
+
+\begin{document}
+\subfile{ch/cover.tex}
+
+\newpage
+\pagenumbering{roman}
+\chapter*{DAFTAR ISI}
+\addcontentsline{toc}{chapter}{DAFTAR ISI}
+\tableofcontents
+
+\newpage
+\pagestyle{fancy}
+\cfoot{\thepage}
+\subfile{ch/abstract.tex}
+
+
+\newpage
+\pagenumbering{arabic}
+\subfile{ch/ch01.tex}
+
+\newpage
+\subfile{ch/ch02.tex}
+
+\newpage
+\subfile{ch/ch03.tex}
+
+\end{document}

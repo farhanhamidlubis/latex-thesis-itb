@@ -1,0 +1,87 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\noindent
+\chapter{Pendahuluan}
+\section{Latar Belakang}
+Karbonat merupakan salah satu jenis litologi yang dapat menjadi reservoir
+hidrokarbon. Persentase reservoir karbonat di dunia diperkirakan mencapai 50-
+60% (Burchette, 2012). Di Indonesia, reservoir karbonat memiliki porsi sekitar
+50% (Park dkk., 1995) sampai dengan 80% (Merza Media dkk., 2019) dari
+seluruh cekungan yang telah teridentifikasi. Angka yang cukup besar ini
+memunculkan potensi penemuan hidrokarbon yang tinggi. Namun, kenyataannya,
+karbonat merupakan batuan yang sangat kompleks. Karbonat memiliki struktur
+internal yang sangat berbeda dengan batuan reservoir klastik pada umumnya.
+Porositas pada batuan karbonat terbagi menjadi dua jenis, yaitu primer dan
+sekunder. Hal ini disebabkan oleh proses pembentukan batuan karbonat yang
+melibatkan proses fisika, kimia, dan biologi ketika proses seidmentasi sehingga
+memiliki fasies yang heterogen disertai dengan permeabilitas yang buruk (Xu dan
+Payne, 2009). Proses diagenesis juga mempersulit analisa fisika batuan dan
+parameter elastis batuan serta hubungannya dengan data seismik (Zhao dkk.,
+2014). Proses karakterisasi data seismik dan analisa persebaran litofasies pun
+menjadi relatif lebih sulit.\\
+\newline
+Meskipun memiliki kompleksitas yang tinggi, sudah cukup banyak penelitian
+tentang karakterisasi reservoir karbonat di Indonesia. Interpretasi kualitatif mulai
+dilakukan untuk melihat persebaran reservoir karbonat menggunakan informasi
+sumur dan data seismik (Alam dkk., 1999, Fainstein dan Meyer, 1997). Analisis
+kuantitatif kemudian menjadi metode yang berkembang secara signifikan,
+khususnya di bidang AVA dan inversi akustik, untuk memetakan distribusi
+reservoir karbonat (Adriansyah dan McMechan, 2001, Pramudito dkk., 2017).
+Penelitian terbaru melibatkan metode statistik neural network dalam estimasi
+parameter fisik batuan (distribusi porositas dan rekahan), litofasies, serta distribusi
+fluida (Hasanusi, 2014, Merza Media dkk., 2019). Meski demikian, penelitian ini
+masih menggunakan inversi deterministik.\\
+\newline
+Salah satu faktor yang belum diperhatikan oleh penelitian-penelitian terkait
+karakterisasi reservoir karbonat di Indonesia adalah unsur ketidakpastian
+(uncertainty) dari hasil analisis yang diperoleh. Target dari proses inversi tidak
+hanya mendapatkan model parameter yang diinginkan, namun harus bisa
+menampilkan ketidakpastian dari model yang diperoleh itu sendiri (Buland dan
+Omre, 2003). Ketidakpastian yang diperoleh dapat membantu penentuan
+keputusan pada tahapan eksplorasi hidrokarbon selanjutnya. Dalam ranah prediksi
+litofasies dan fluida (LFP) dari data seismik, ketidakpastian dapat muncul dari
+banyak sumber seperti noise pengukuran dan pengolahan, aproksimasi model, dan
+perubahan skala. Reservoir karbonat sendiri menambah ketidakpastian hasil
+inversi dari kompleksitas fisis yang dimilikinya. Ketidakpastian tersebut, secara
+statistik, dapat diatasi dengan memperbanyak data, informasi, dan pemahaman
+terkait reservoir yang akan dikarakterisasi dari data seismik. Oleh karena itu,
+kerangka kerja Bayesian sangat tepat dalam menggabungkan berbagai data
+tersebut untuk menghitung ketidakpastian suatu proses inversi (Eidsvik dkk.,
+2004, Gunning dan Glinsky, 2007, Zhao dkk., 2014).\\
+\newline
+Penelitian ini akan memprediksi distribusi litofasies dan konten fluida dari
+reservoir karbonat menggunakan inversi Bayesian. Kerangka kerja inversi
+Bayesian sangat bergantung pada parameter elastik batuan yaitu Vp, Vs, dan
+densitas. Peneliti akan melakukan analisa fisika batuan terlebih dahulu untuk
+mengetahui parameter elastik yang sensitif dalam mengklasifikasi reservoir
+karbonat dari data seismik. Metode amplitude variation with offset (AVO)
+terlinearisasi dalam kerangka Bayesian akan digunakan untuk menginversi
+parameter elastik batuan dari data seismik (Buland dan Omre, 2003). Parameter
+tersebut kemudian digunakan untuk melakukan inversi probabilistik Bayesian
+untuk memperoleh hasil akhir berupa prediksi litofasies dan konten fluida dalam
+bentuk distribusi posterior (Zhao dkk., 2014).
+
+
+\section{Tujuan Penelitian}
+\begin{enumerate}[itemsep = 0pt, parsep = 0pt]
+    \item Menentukan parameter elastik untuk klasifikasi litoflasies dan konten fluida
+    reservoir karbonat lapangan migas x;
+    \item Memprediksi sebaran litofasies dan konten fluida secara probabilistik pada
+    lapangan migas x;
+    \item Melakukan evaluasi akurasi prediksi sebaran litofasies dan konten fluida pada
+    reservoir karbonat.
+\end{enumerate}
+\section{Rumusah Permasalahan}
+\begin{enumerate}[itemsep = 0pt, parsep = 0pt]
+    \item Apa sajakah kategori litofasies dan konten fluida dari reservoir karbonat pada
+    lapangan x?
+    \item Apakah parameter elastik yang sensitif dalam memisahkan kelas litofasies
+    dan konten fluida tersebut?
+    \item Apakah inversi AVO terlinearisasi dalam kerangka dapat digunakan untuk
+    mendapatkan parameter elastik dari data seismik pada lapangan x?
+    \item Apakah distribusi posterior prediksi litofasies dan konten fluida dari data
+    seismik memiliki kesesuaian dengan informasi pada sumur?
+\end{enumerate}        
+
+\end{document}
