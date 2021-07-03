@@ -13,6 +13,7 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{enumitem}
+\usepackage{titlesec}
 
 % Layout
 \setlength{\topmargin}{0pt}
@@ -25,6 +26,13 @@
 \setlength{\footskip}{1.5cm}
 \setlength{\marginparsep}{0pt}
 \setlength{\marginparwidth}{0pt}
+
+% Redefine chapter & section
+\renewcommand{\chaptername}{Bab}
+\renewcommand \thechapter {\@Roman\c@chapter}
+\titleformat{\chapter}{\fontsize{14}{14}\bfseries\centering}{\chaptername\space\thechapter}{1em}{}
+\titleformat{\section}{\bfseries}{\thesection}{1em}{}
+\titlespacing*{\chapter} {0pt}{-20pt}{1.5em}
 
 % Some preference settings 
 \renewcommand{\baselinestretch}{1.5}
@@ -81,12 +89,21 @@
 			\lsstyle\fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@thesistitle}
 			\par\nobreak			
 			\vskip 0pt plus 2fill\relax
+
+			% Untuk proposal tesis I
+			\MakeUppercase{\normalfont\bfseries Proposal Tesis}\\	
 			
-			\MakeUppercase{\normalfont\bfseries Tesis}\\	
+% 			% Untuk draft akhir
+% 			\MakeUppercase{\normalfont\bfseries Tesis}\\	
 			\vspace{\baselineskip}			
 			
-			{\fontsize{12pt}{14pt}\selectfont\normalfont\bfseries Karya tulis sebagai salah satu syarat\\untuk memperoleh gelar Magister dari\\ \@university}			
+			% Untuk proposal tesis I
+			{\fontsize{12pt}{14pt}\selectfont\normalfont\bfseries Karya tulis sebagai salah satu syarat\\untuk melaksanakan seminar Tesis I dari\\ \@university}			
 			\vskip 0pt plus 1fill\relax
+			
+% 			% Untuk draft akhir
+% 			{\fontsize{12pt}{14pt}\selectfont\normalfont\bfseries Karya tulis sebagai salah satu syarat\\untuk memperoleh gelar Magister dari\\ \@university}			
+% 			\vskip 0pt plus 1fill\relax
 			
 			\normalfont\bfseries {\fontsize{12pt}{14pt}\selectfont Oleh}\\ {\MakeUppercase{\normalfont\bfseries\@fullname\\NIM: \@idnum}\\(Program Studi \@degree)}		
 			\vskip 0pt plus 1fill\relax			
